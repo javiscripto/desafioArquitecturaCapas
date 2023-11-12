@@ -1,17 +1,18 @@
 import express from "express";
 import config from "../config/config.js";
+import mongoConection from "./persistence/mongoConection.js";
+
+
 
 const app = express();
-const port = process.env.PORT;
+const port = config.PORT||8080;
 
 //middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-app.get("/", (req, res)=>{
-    res.send("funcionando")
-})
+
 
 
 
