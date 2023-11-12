@@ -1,5 +1,4 @@
-pass= coder123456
-connection=mongodb+srv://javiermecker94:coder123456@arquitecturacapas.gkx3tct.mongodb.net/?retryWrites=true&w=majority
+
 
 
 app.post("/create", async (req, res) => {
