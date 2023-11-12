@@ -1,0 +1,22 @@
+pass= coder123456
+connection=mongodb+srv://javiermecker94:coder123456@arquitecturacapas.gkx3tct.mongodb.net/?retryWrites=true&w=majority
+
+
+app.post("/create", async (req, res) => {
+  try {
+    const user = new userModel(req.body);
+    await user.save();
+    res.json(user);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.get("/get", async (req, res) => {
+  try {
+    const users = await userModel.find();
+    res.json({message:"success",payload:users});
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
