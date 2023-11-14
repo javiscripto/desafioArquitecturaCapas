@@ -9,4 +9,4 @@ async function main() {
   console.log("Connected to the database");
   
 }
-export default main()
+//
